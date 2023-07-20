@@ -1,0 +1,55 @@
+LOCUS       IPCC-SmR_v2MX-dsSS9_NEU 2117 bp ds-DNA     circular     19-APR-2023
+DEFINITION  .
+KEYWORDS    "Source Note:text" "Cutter Mechanism:CRISPR-Cas9/sgRNA" "CRISPR
+            Guide:Target-dsSS9 NEUTRAL LOCUS-KO-sg1" "Promoter:J23119(SpeI)
+            promoter" "Terminator" "Gene:SmR_v2" "Primer"
+            "Description:IPCC-SmR_v2MX-dsSS9 NEUTRAL LOCUS-KO-sg1" "Locus:SS9"
+            "Gene Name" "Tactic" "Construct Using Entry Vector" "Attached
+            Primers" "Historical Name" "Origin:ColE1 origin"
+FEATURES             Location/Qualifiers
+     misc_feature    192..226
+                     /label="J23119(SpeI) promoter"
+     misc_feature    227..246
+                     /label="Target-dsSS9 NEUTRAL LOCUS-KO-sg1"
+     misc_feature    508..1299
+                     /label="SmR_v2"
+     misc_feature    complement(1473..2061)
+                     /label="ColE1 origin"
+ORIGIN
+        1 catgttcttt cctgcgttat cccctgattc tgtggataac cgtattaccg cctttgagtg
+       61 agctgatacc gctcgccgca gccgaacgac cgagcgcagc gagtcagtga gcgaggaagc
+      121 ggaagagcgc ctgatgcggt attttctcct tacgcatctg tgcggtattt cacaccgCAT
+      181 ATGctggatc cttgacagct agctcagtcc taggtataat actagttctg gcgcaggtga
+      241 tatgtagttt tagagctaga aatagcaagt taaaataagg ctagtccgtt atcaacttga
+      301 aaaagtggca ccgagtcggt gctttttttg aattctctag agtcgacctg cagaagctta
+      361 gatctATTAC CCTGTTATCC CTActcgagt tcatgtgcag ctccataagc aaaaggggat
+      421 gataagttta tcaccaccga ctatttgcaa cagtgccgtt gatcgtgcta tgatcgactg
+      481 atgtcatcag cggtggagtg caatgtcatg agggaagcgg tgatcgccga agtatcgact
+      541 caactatcag aggtagttgg cgtcatcgag cgccatctcg aaccgacgtt gctggccgta
+      601 catttgtacg gctccgcagt ggatggcggc ctgaagccac acagtgatat tgatttgctg
+      661 gttacggtga ccgtaaggct tgatgaaaca acgcggcgag ctttgatcaa cgaccttttg
+      721 gaaacttcgg cttcccctgg agagagcgag attctccgcg ctgtagaagt caccattgtt
+      781 gtgcacgacg acatcattcc gtggcgttat ccagctaagc gcgaactgca atttggagaa
+      841 tggcagcgca atgacattct tgcaggtatc ttcgagccag ccacgatcga cattgatctg
+      901 gctatcttgc tgacaaaagc aagagaacat agcgttgcct tggtaggtcc agcggcggag
+      961 gaactctttg atccggttcc tgaacaggat ctatttgagg cgctaaatga aaccttaacg
+     1021 ctatggaact cgccgcccga ctgggctggc gatgagcgaa atgtagtgct tacgttgtcc
+     1081 cgcatttggt acagcgcagt aaccggcaaa atcgcgccga aggatgtcgc tgccgactgg
+     1141 gcaatggagc gcctgccggc ccagtatcag cccgtcatac ttgaagctag acaggcttat
+     1201 cttggacaag aagaagatcg cttggcctcg cgcgcagatc agttggaaga atttgtccac
+     1261 tacgtgaaag gcgagatcac caaggtagtc ggcaaataag atgccgctcg ccagtcgatt
+     1321 ggctgagctc ataagttcct attccgaagt tccgcgaacg cgtaaaggat ctaggtgaag
+     1381 atcctttttg ataatctcat gaccaaaatc ccttaacgtg agttttcgtt ccactgagcg
+     1441 tcagaccccg tagaaaagat caaaggatct tcttgagatc ctttttttct gcgcgtaatc
+     1501 tgctgcttgc aaacaaaaaa accaccgcta ccagcggtgg tttgtttgcc ggatcaagag
+     1561 ctaccaactc tttttccgaa ggtaactggc ttcagcagag cgcagatacc aaatactgtc
+     1621 cttctagtgt agccgtagtt aggccaccac ttcaagaact ctgtagcacc gcctacatac
+     1681 ctcgctctgc taatcctgtt accagtggct gctgccagtg gcgataagtc gtgtcttacc
+     1741 gggttggact caagacgata gttaccggat aaggcgcagc ggtcgggctg aacggggggt
+     1801 tcgtgcacac agcccagctt ggagcgaacg acctacaccg aactgagata cctacagcgt
+     1861 gagctatgag aaagcgccac gcttcccgaa gggagaaagg cggacaggta tccggtaagc
+     1921 ggcagggtcg gaacaggaga gcgcacgagg gagcttccag ggggaaacgc ctggtatctt
+     1981 tatagtcctg tcgggtttcg ccacctctga cttgagcgtc gatttttgtg atgctcgtca
+     2041 ggggggcgga gcctatggaa aaacgccagc aacgcggcct ttttacggtt cctggccttt
+     2101 tgctggcctt ttgctca
+//
