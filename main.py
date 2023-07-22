@@ -55,7 +55,7 @@ def get_complement(dna_sequence):
     
     return complementary_sequence
 
-def search_upstream_downstream_in_sequence(main_sequence, upstream_sequence, downstream_sequence, cutsite_sequence):
+def search_upstream_downstream_in_sequence(main_sequence, upstream_sequence, downstream_sequence, cutsite_sequence=None):
     # Searches for the location of upstream and downstream sequences in the main sequence.
 
     def find_sequence_in_main(sequence):
@@ -72,8 +72,10 @@ def search_upstream_downstream_in_sequence(main_sequence, upstream_sequence, dow
     upstream_result = find_sequence_in_main(upstream_sequence)
     print("Downstream ", end='')
     downstream_result = find_sequence_in_main(downstream_sequence)
-    print("Cut site ", end='')
-    find_sequence_in_main(cutsite_sequence)\
+    
+    if cutsite_sequence is not None:
+        print("Cut site ", end='')
+        find_sequence_in_main(cutsite_sequence)
         
     if upstream_result[1] != downstream_result[1]:
         return KeyError("Upstream and downstream sequences are not the same type. Please check the sequences.")
