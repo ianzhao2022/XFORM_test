@@ -63,7 +63,7 @@ def search_upstream_downstream_in_sequence(main_sequence, upstream_sequence, dow
         for variant_type, seq_type in enumerate(seq_variants, start=1):
             index = main_sequence.find(seq_type)
             if index != -1:
-                print(f"sequence (or its variant) found at index {index}:{index+len(sequence)}")
+                print(f"sequence (or its variant) found at index {index+1}:{index+len(sequence)+1}")
                 return index, variant_type
         print("sequence and its variants not found")
         return -1, 0
@@ -124,22 +124,22 @@ if __name__ == "__main__":
     # Process and print information about insert sequence(upstream and downstream sequences, features, etc.)
     for sequence_name, data in genbank_sequences.items():
         sequence, features, length, upstream_location, downstream_location = data
-        print(f"Sequence name: {sequence_name}")
-        print(f"Sequence length: {length} base pairs")
-        print(f"Upstream location: {upstream_location}")
-        print(f"Downstream location: {downstream_location}")
+        # print(f"Sequence name: {sequence_name}")
+        # print(f"Sequence length: {length} base pairs")
+        # print(f"Upstream location: {upstream_location}")
+        # print(f"Downstream location: {downstream_location}")
 
         # Extract and print upstream and downstream sequences
         upstream_sequence, downstream_sequence = get_upstream_downstream_sequences(sequence, upstream_location, downstream_location)
-        print(f"Upstream sequence: {upstream_sequence}")
-        print(f"Downstream sequence: {downstream_sequence}")
+        # print(f"Upstream sequence: {upstream_sequence}")
+        # print(f"Downstream sequence: {downstream_sequence}")
 
         # Print Features
-        print("Features:")
-        for feature in features:
-            print(f"\tFeature type: {feature.type}")
-            print(f"\tLocation: {feature.location}")
-            print(f"\tQualifiers: {feature.qualifiers}")
+        # print("Features:")
+        # for feature in features:
+        #     print(f"\tFeature type: {feature.type}")
+        #     print(f"\tLocation: {feature.location}")
+        #     print(f"\tQualifiers: {feature.qualifiers}")
             
     # Set the insert sequence
     insert_seq = sequence
