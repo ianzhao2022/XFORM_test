@@ -10,20 +10,9 @@ def read_fasta(filename):
             sequences.append(record.seq)
     return sequences
 
-# def read_genbank(filename):
-#     # Read the GenBank file and return the sequence, upstream, and downstream homology
-#     with open(filename, 'r') as file:
-#         record = SeqIO.read(file, 'genbank')
-#         return record.seq, record.annotations['chuR_2[1486E:1987E]'], record.annotations['chuR_2[2008E:2507E]']
-
 def get_upstream_downstream_sequences(sequence, upstream_location, downstream_location):
-    """
-    Extracts and returns the upstream and downstream sequences from the main sequence.
-    :param sequence: The main sequence.
-    :param upstream_location: A location object representing the upstream region.
-    :param downstream_location: A location object representing the downstream region.
-    :return: A tuple containing the upstream and downstream sequences.
-    """
+    # Extracts and returns the upstream and downstream sequences from the main sequence.
+
     upstream_start = upstream_location.start
     upstream_end = upstream_location.end
     downstream_start = downstream_location.start
@@ -35,13 +24,9 @@ def get_upstream_downstream_sequences(sequence, upstream_location, downstream_lo
     return upstream_sequence, downstream_sequence
 
 def read_genbank(file_path):
-    """
-    Reads a GenBank file and returns a dictionary containing the sequence names as keys and a tuple of
-    (sequence, features, length, upstream_location, downstream_location) as values.
-    :param file_path: The path to the GenBank file.
-    :return: A dictionary containing sequence names as keys and (sequence, features, length, upstream_location,
-    downstream_location) tuple as values.
-    """
+    # Reads a GenBank file and returns a dictionary containing the sequence names as keys and a tuple of 
+    # (sequence, features, length, upstream_location, downstream_location) as values.
+
     sequences_with_info = {}
 
     with open(file_path, 'r') as file:
@@ -52,22 +37,13 @@ def read_genbank(file_path):
             
             # Find the first and last feature locations and save them as upstream and downstream locations
             upstream_location = features[0].location
-            downstream_location = features[-1].location
-            
-            # Find the first and last feature locations and save them as upstream and downstream locations
-            #upstream_location = (features[0].location.start.position+1, features[0].location.end.position)
-            #downstream_location = (features[-1].location.start.position+1, features[-1].location.end.position)
+            downstream_location = features[-1].locationWWW
             
             # Save the information in the dictionary
             sequences_with_info[record.id] = (sequence, features, length, upstream_location, downstream_location)
             upstream_sequence, downstream_sequence = get_upstream_downstream_sequences(sequence, upstream_location, downstream_location)
     return sequence, upstream_sequence, downstream_sequence
 
-def pairwise_alignment(seq1, seq2):
-    # Perform pairwise alignment between two sequences
-    aligner = Align.PairwiseAligner()
-    alignments = aligner.align(seq1, seq2)
-    return alignments[0].aligned[0], alignments[0].aligned[1]
 
 def homologous_recombination(target_seq, insert_seq, upstream_homology, downstream_homology):
     # Convert sequences to Python strings
