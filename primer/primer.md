@@ -1,10 +1,10 @@
-### Primer
+# Primer
 
-5_G 
+### 5_G 
 CTGGACAGACTGCACAAACC
 
-5_P 
+### 5_P 
 TGGCGCAGGTGATATGTAGG
 
-5_C 
+### 5_C 
 CATCTTCCTCGGTCGCAAAG
